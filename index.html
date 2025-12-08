@@ -13,7 +13,7 @@
 
     body {
       display: flex;
-      flex-direction: column;   /* 上にヘッダー、下にメインエリア */
+      flex-direction: column;
       min-height: 100vh;
       background-color: #ebf0f4;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -25,6 +25,7 @@
       font-size: 12px;
       line-height: 1.6;
       box-sizing: border-box;
+      text-align: center;          /* ここで中央揃え */
     }
 
     header p {
@@ -33,10 +34,10 @@
     }
 
     main {
-      flex: 1;  /* 余白をすべてメインに */
+      flex: 1;
       display: flex;
-      justify-content: center; /* 水平中央 */
-      align-items: center;     /* 垂直中央 */
+      justify-content: center;
+      align-items: center;
     }
 
     img {
@@ -51,7 +52,7 @@
 <body>
   <header>
     <p>
-      ※ この記事はAI技術のデモンストレーションのために自動で生成されたものです。人間の手による編集が入っていないため、内容の正確性は保証されません。ご注意ください
+      ※ この記事はAI技術のデモンストレーションのために自動で生成されたものです。人間の手による編集が入っていないため、内容の正確性は保証されません。ご注意ください ※<br />© Synesthesia inc.
     </p>
   </header>
 
