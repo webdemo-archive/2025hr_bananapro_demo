@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Responsive Image Center with Header</title>
   <style>
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       height: 100%;
@@ -17,20 +19,36 @@
       min-height: 100vh;
       background-color: #ebf0f4;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      /* 固定ヘッダー/フッター用の余白 */
+      padding-top: 52px;
+      padding-bottom: 36px;
     }
 
     header {
-      background-color: #555555;   /* グレー地の帯 */
+      background-color: #555555;
+      /* グレー地の帯 */
       padding: 8px 16px;
       font-size: 12px;
       line-height: 1.6;
       box-sizing: border-box;
       text-align: center;
+      /* スクロール固定 */
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
     }
 
     header p {
       margin: 0;
-      color: #ffeb3b;  /* 黄色文字 */
+      color: #ffeb3b;
+      /* 黄色文字 */
+    }
+
+    /* オレンジ色テキスト用 */
+    header .warning-text {
+      color: #ff9800;
     }
 
     main {
@@ -49,12 +67,20 @@
     }
 
     footer {
-      background-color: #555555;   /* 下部にもグレーの帯 */
+      background-color: #555555;
+      /* 下部にもグレーの帯 */
       padding: 6px 16px;
       font-size: 11px;
       text-align: center;
       box-sizing: border-box;
-      color: #ffeb3b;              /* 読みやすいよう黄色文字に */
+      color: #ffffff;
+      /* 白文字 */
+      /* スクロール固定 */
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
     }
 
     footer p {
@@ -62,10 +88,12 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <p>
-      ※ この記事はAI技術のデモンストレーションのために自動で生成されたものです。人間の手による編集が入っていないため、内容の正確性は保証されません。ご注意ください ※
+      ※ この記事はAI技術のデモンストレーションのために自動で生成されたものです。 ※<br>
+      人間の手による編集が入っていないため、<span class="warning-text">内容の正確性は保証されません。</span>ご注意ください
     </p>
   </header>
 
@@ -77,4 +105,5 @@
     <p>© Synesthesia inc.</p>
   </footer>
 </body>
+
 </html>
